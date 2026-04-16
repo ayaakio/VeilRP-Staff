@@ -15,12 +15,14 @@ body {
   padding: 18px;
   background: #0c1c30;
   border-bottom: 1px solid #2f6ca5;
+  flex-wrap: wrap;
 }
 
 .nav a {
   color: #b9ddff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover {
@@ -37,13 +39,36 @@ body {
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* ===== LOGO (FIXED + ANIMATED) ===== */
 .logo {
   width: 140px;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 140, 255, 0.4);
+  display: block;
+  margin: 0 auto;
+
+  /* Glow */
+  filter: drop-shadow(0 0 20px rgba(0, 140, 255, 0.6));
+
+  /* Floating animation */
+  animation: float 4s ease-in-out infinite;
+
+  /* Smooth hover */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 35px rgba(0, 140, 255, 0.9));
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
 /* ===== HEADERS ===== */
@@ -51,6 +76,7 @@ body {
   text-align: center;
   font-size: 28px;
   margin: 30px 0 20px;
+  color: #dff0ff;
 }
 
 .sub-header {
@@ -59,13 +85,14 @@ body {
   color: #9ecbff;
 }
 
-/* ===== BOXES ===== */
+/* ===== CONTENT BOXES ===== */
 .box {
   background: #10273f;
   border: 1px solid #2f6fff;
   border-radius: 14px;
   padding: 25px;
   margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(47, 111, 255, 0.15);
 }
 
 /* ===== TEXT ===== */
@@ -73,14 +100,14 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===== LISTS ===== */
+/* ===== LISTS (FIXED ALIGNMENT) ===== */
 .box ul {
   padding-left: 20px;
   margin-bottom: 15px;
 }
 
 .box li {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 /* ===== FOOTER ===== */
@@ -99,5 +126,9 @@ body {
 
   .main-header {
     font-size: 22px;
+  }
+
+  .sub-header {
+    font-size: 18px;
   }
 }
