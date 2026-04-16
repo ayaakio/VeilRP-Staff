@@ -9,6 +9,7 @@
 body {
   background: #081a2b;
   color: #e6f2ff;
+  line-height: 1.6;
 }
 
 /* ===== NAVBAR ===== */
@@ -34,14 +35,14 @@ body {
 /* ===== LAYOUT ===== */
 .container,
 .menu-wrapper {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
-  text-align: center;
 }
 
 /* ===== HERO ===== */
 .hero {
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -53,13 +54,14 @@ body {
 
 /* ===== HEADERS ===== */
 .main-header {
+  text-align: center;
   font-size: 28px;
   margin: 30px 0 20px;
 }
 
 .sub-header {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #9ecbff;
 }
 
@@ -70,8 +72,22 @@ body {
   border-radius: 16px;
   padding: 25px;
   margin-bottom: 25px;
-  text-align: left;
   box-shadow: 0 0 20px rgba(47, 111, 255, 0.15);
+}
+
+/* ===== TEXT INSIDE BOXES ===== */
+.box p {
+  margin-bottom: 10px;
+}
+
+/* ===== LISTS (FIXED PROPERLY) ===== */
+.box ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.box li {
+  margin-bottom: 5px;
 }
 
 /* ===== MENU GRID ===== */
@@ -91,6 +107,7 @@ body {
   color: #e6f2ff;
   transition: 0.2s ease;
   box-shadow: 0 0 15px rgba(47, 111, 255, 0.15);
+  text-align: center;
 }
 
 .menu-card:hover {
@@ -107,34 +124,9 @@ body {
   color: #bcdfff;
 }
 
-/* ===== LIST FIX (IMPORTANT) ===== */
-
-/* Main lists */
-.box ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 10px 0;
-}
-
-/* Nested lists (fix drifting issue) */
-.box ul ul {
-  list-style-type: circle;
-  padding-left: 15px;
-  margin: 5px 0;
-}
-
-/* List spacing */
-.box li {
-  margin-bottom: 6px;
-}
-
-/* Highlight titles inside lists */
-.box li strong {
-  color: #a8d8ff;
-}
-
-/* ===== FOOTER TEXT ===== */
+/* ===== FOOTER ===== */
 .footer {
+  text-align: center;
   margin-top: 30px;
   font-size: 14px;
   color: #7fb3ff;
